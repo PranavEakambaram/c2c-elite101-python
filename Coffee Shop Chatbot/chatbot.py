@@ -1,5 +1,5 @@
 from order_menu import menu
-
+from make_your_own_coffee import bases, milks, sugars, drizzles
 
 cart = []
 
@@ -50,7 +50,10 @@ while True:
 
 
     elif choice == "2":
-        print("Choose your base: ")
+        print("Choose your base:")
+        for b in bases:
+            print("hi")
+
 
 
 
