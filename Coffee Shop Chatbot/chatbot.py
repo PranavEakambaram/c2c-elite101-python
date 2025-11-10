@@ -21,6 +21,7 @@ while True:
 
     if choice == "1":
 
+        print("")
         print("Here's Our Menu:")
         print("")
         for i in menu:
@@ -49,10 +50,47 @@ while True:
 
 
 
+
     elif choice == "2":
-        print("Choose your base:")
-        for b in bases:
-            print("hi")
+
+        base_selected = None
+        while (base_selected = None)
+            print("Choose your base:")
+
+            for b in bases:
+                print(b['id'] + ": " + b['Name'])
+
+            base_choice = input ("Enter the ID of the base you would like.")
+
+            for b in bases:
+                if b['id'] == base_choice:
+                    base_selected = b['name']
+                    break
+
+            if base_selected == None:
+                print("Please enter a valid base ID")
+        print(f"Your Base: {base_selected}")
+
+        milk_selected = None
+        while (milk_selected = None)
+            print("Choose your milk type:")
+
+            for m in milks:
+                print(m['id'] + ": " + m['Name'])
+
+            milk_choice = input ("Enter the ID of the milk you would like.")
+
+            for m in milks:
+                if m['id'] == milk_choice:
+                    milk_selected = m['name']
+                    break
+
+            if milk_selected == None:
+                print("Please enter a valid milk ID")
+        print(f"Your Milk: {milk_selected}")
+
+
+
 
 
 
@@ -67,7 +105,7 @@ while True:
             for i in cart:
                 print(i['product_id'] + ": " + i['Name'] + " - " + i['Price'])
 
-            action = input("Enter a product ID to remove an item, or enter 'Checkout' to purchase, or enter 'Quit' to go back")
+            action = input("Enter a product ID to remove an item, or enter 'Checkout' to purchase, or enter 'Quit' to go back.")
 
             if action == "Checkout":
                 print ("Your coffee will be ready in 5 minutes")
