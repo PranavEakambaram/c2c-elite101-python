@@ -6,7 +6,7 @@ cart = []
 print("Welcome to Pranav's Coffee Shop!")
 user_name = input ("What's your name?")
 user_age = input("How old are you?")
-print("Hi {user_name}! How can I help you today?")
+print(f"Hi {user_name}! How can I help you today?")
 
 
 while True:
@@ -22,9 +22,9 @@ while True:
     if choice == "1":
 
         print("Here's Our Menu:")
-
+        print("")
         for i in menu:
-            print(i['product_id'] + ": " + i['Name'] + " - $" + i['Price'])
+            print(i['product_id'] + ": " + i['Name'] + " - " + i['Price'])
 
         product_id = input("Enter the product ID of the drink you would like to add to cart. Enter 'Quit' to go back.")
 
@@ -38,16 +38,16 @@ while True:
                     item = i
                     break
 
-        if item:
+            if item:
                 cart.append(item)
                 print("Item has been added to cart!")
-        else:
+            else:
                 print("Product not found")
 
     elif choice == "2":
         asdf
     elif choice == "3":
-        asdf
+        print("Here's Your Cart")
     elif choice == "4":
         asdf
     elif choice == "5":
