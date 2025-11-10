@@ -1,6 +1,7 @@
+from order_menu import menu
 
 
-
+cart = []
 
 print("Welcome to Pranav's Coffee Shop!")
 user_name = input ("What's your name?")
@@ -18,15 +19,38 @@ while True:
 
     choice = input("What would you like to do?")
 
-    if choice = 1:
-        sdfasd
-    elif choice = 2:
+    if choice == "1":
+
+        print("Here's Our Menu:")
+
+        for i in menu:
+            print(i['product_id'] + ": " + i['Name'] + " - $" + i['Price'])
+
+        product_id = input("Enter the product ID of the drink you would like to add to cart. Enter 'Quit' to go back.")
+
+        if product_id == "Quit":
+            pass
+
+        else:
+            item = None
+            for i in menu:
+                if i['product_id'] == product_id:
+                    item = i
+                    break
+
+        if item:
+                cart.append(item)
+                print("Item has been added to cart!")
+        else:
+                print("Product not found")
+
+    elif choice == "2":
         asdf
-    elif choice = 3:
+    elif choice == "3":
         asdf
-    elif choice = 4:
+    elif choice == "4":
         asdf
-    elif choice = 5:
+    elif choice == "5":
         print("Thank you, {user_name}, Hope to see you again!")
         break
     else:
