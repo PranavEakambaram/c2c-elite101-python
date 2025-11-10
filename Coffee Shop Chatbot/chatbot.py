@@ -54,7 +54,7 @@ while True:
     elif choice == "2":
 
         base_selected = None
-        while (base_selected = None)
+        while (base_selected == None):
             print("Choose your base:")
 
             for b in bases:
@@ -72,7 +72,7 @@ while True:
         print(f"Your Base: {base_selected}")
 
         milk_selected = None
-        while (milk_selected = None)
+        while (milk_selected == None):
             print("Choose your milk type:")
 
             for m in milks:
@@ -90,13 +90,13 @@ while True:
         print(f"Your Milk: {milk_selected}")
 
         sugar_selected = None
-        while (sugar_selected = None)
+        while (sugar_selected == None):
             print("Choose your sugar level:")
 
             for s in sugars:
                 print(s['id'] + ": " + s['Name'])
 
-            sugar_choice = input ("Enter the ID of the milk you would like.")
+            sugar_choice = input ("Enter the ID of the sugar level you would like.")
 
             for s in sugars:
                 if s['id'] == sugar_choice:
@@ -108,13 +108,13 @@ while True:
         print(f"Your Sugar Level: {sugar_selected}")
 
         drizzle_selected = None
-        while (drizzle_selected = None)
+        while (drizzle_selected == None):
             print("Choose your drizzle: ")
 
-            for d in drizzle:
+            for d in drizzles:
                 print(d['id'] + ": " + d['Name'])
 
-            drizzle_choice = input ("Enter the ID of the milk you would like.")
+            drizzle_choice = input ("Enter the ID of the drizzle you would like.")
 
             for d in drizzles:
                 if d['id'] == drizzle_choice:
@@ -124,6 +124,8 @@ while True:
             if drizzle_selected == None:
                 print("Please enter a valid drizzle ID")
         print(f"Your Drizzle: {drizzle_selected}")
+
+        print("Your Coffee: ")
 
 
 
