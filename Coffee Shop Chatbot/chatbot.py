@@ -89,9 +89,41 @@ while True:
                 print("Please enter a valid milk ID")
         print(f"Your Milk: {milk_selected}")
 
+        sugar_selected = None
+        while (sugar_selected = None)
+            print("Choose your sugar level:")
 
+            for s in sugars:
+                print(s['id'] + ": " + s['Name'])
 
+            sugar_choice = input ("Enter the ID of the milk you would like.")
 
+            for s in sugars:
+                if s['id'] == sugar_choice:
+                    sugar_selected = s['name']
+                    break
+
+            if sugar_selected == None:
+                print("Please enter a valid Sugar Level ID")
+        print(f"Your Sugar Level: {sugar_selected}")
+
+        drizzle_selected = None
+        while (drizzle_selected = None)
+            print("Choose your drizzle: ")
+
+            for d in drizzle:
+                print(d['id'] + ": " + d['Name'])
+
+            drizzle_choice = input ("Enter the ID of the milk you would like.")
+
+            for d in drizzles:
+                if d['id'] == drizzle_choice:
+                    drizzle_selected = d['name']
+                    break
+
+            if drizzle_selected == None:
+                print("Please enter a valid drizzle ID")
+        print(f"Your Drizzle: {drizzle_selected}")
 
 
 
@@ -130,7 +162,7 @@ while True:
 
 
     elif choice == "4":
-        asdf
+        print("asdf")
 
 
 
