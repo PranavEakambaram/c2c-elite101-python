@@ -71,6 +71,26 @@ while True:
                 print("Please enter a valid base ID")
         print(f"Your Base: {base_selected}")
 
+
+        flavor_selected = None
+        while (flavor_selected == None):
+            print("Choose your flavor")
+
+            for f in flavors:
+                print(f['id'] + ": " + f['Name'])
+
+            flavor_choice = input ("Enter the ID of the flavor you would like.")
+
+            for f in flavors:
+                if f['id'] == flavor_choice:
+                    flavor_selected = f['name']
+                    break
+
+            if flavor_selected == None:
+                print("Please enter a valid flavor ID")
+        print(f"Your Flavor: {flavor_selected}")
+
+
         milk_selected = None
         while (milk_selected == None):
             print("Choose your milk type:")
@@ -126,6 +146,11 @@ while True:
         print(f"Your Drizzle: {drizzle_selected}")
 
         print("Your Coffee: ")
+        print(f"Base: {base_selected}")
+        print(f"Flavor: {base_selected}")
+        print(f"Milk: {base_selected}")
+        print(f"Suger: {base_selected}")
+        print(f"Drizzle: {base_selected}")
 
 
 

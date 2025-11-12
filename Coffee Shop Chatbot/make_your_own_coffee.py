@@ -6,6 +6,13 @@ bases = [
     {"id": "B3", "Name": "Frappuccino"}
 ]
 
+flavors = [
+    {"id" : "F1", "Name": "Vanilla"},
+    {"id" : "F2", "Name": "Chocolate"},
+    {"id" : "F3", "Name": "Caramel"},
+    {"id" : "F4", "Name": "Hazelnut"}
+]
+
 milks = [
     {"id": "M1", "Name": "Whole Milk"},
     {"id": "M2", "Name": "Skim Milk"},
