@@ -46,11 +46,6 @@ while True:
                 print("Product not found")
 
 
-
-
-
-
-
     elif choice == "2":
 
         base_selected = None
@@ -71,7 +66,6 @@ while True:
                 print("Please enter a valid base ID")
         print(f"Your Base: {base_selected}")
 
-
         flavor_selected = None
         while (flavor_selected == None):
             print("Choose your flavor")
@@ -89,7 +83,6 @@ while True:
             if flavor_selected == None:
                 print("Please enter a valid flavor ID")
         print(f"Your Flavor: {flavor_selected}")
-
 
         milk_selected = None
         while (milk_selected == None):
@@ -152,6 +145,13 @@ while True:
         print(f"Suger: {base_selected}")
         print(f"Drizzle: {base_selected}")
 
+        print("")
+        add_to_cart = input("Would you like to add your coffee to your cart? Please answer 'Yes' or 'No'")
+
+        if (add_to_cart == "Yes")
+            print("Your Coffee was added to cart")
+        elif (add_to_cart = "No")
+            print()
 
 
 
