@@ -139,19 +139,16 @@ while True:
         print(f"Your Drizzle: {drizzle_selected}")
 
         print("Your Coffee: ")
-        print(f"Base: {base_selected}")
-        print(f"Flavor: {base_selected}")
-        print(f"Milk: {base_selected}")
-        print(f"Suger: {base_selected}")
-        print(f"Drizzle: {base_selected}")
+        custom_order = f"Base: {base_selected}\nFlavor: {base_selected}\nMilk: {base_selected}\nSuger: {base_selected}\nDrizzle: {base_selected}"
+        print(custom_order)
 
-        print("")
         add_to_cart = input("Would you like to add your coffee to your cart? Please answer 'Yes' or 'No'")
 
         if (add_to_cart == "Yes")
-            print("Your Coffee was added to cart")
+            print("Your Coffee was added to cart!")
+
         elif (add_to_cart = "No")
-            print()
+            print("Order cancelled")
 
 
 
