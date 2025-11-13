@@ -148,7 +148,7 @@ while True:
         if (add_to_cart == "Yes"):
             custom_coffee = {
                 "product_id" : str(len(cart) + 1),
-                "Name" : f"Custom Coffee: Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSugar: {sugar_selected}\nDrizzle: {drizzle_selected}",
+                "Name" : f" Custom Coffee: \nBase: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSugar: {sugar_selected}\nDrizzle: {drizzle_selected}",
                 "Price" : "$6.99"
             }
             cart.append(custom_coffee)
@@ -161,6 +161,7 @@ while True:
 
     elif choice == "3":
         if len(cart) == 0:
+
             print("\nYour Cart is Empty. Enter 'Quit' to go back.")
         else:
             print("\nHere's Your Cart:\n")
@@ -172,6 +173,7 @@ while True:
 
             if action == "Checkout":
                 print ("\nYour coffee will be ready in 5 minutes")
+                cart.clear()
 
             elif action == "Quit":
                 pass
@@ -196,16 +198,16 @@ while True:
         print("\nPlease tell us how we can improve!")
 
         while True:
-            print("Please choose one of the following: ")
+            print("\nPlease choose one of the following: ")
             print("1. Leave new feedback")
             print("2. View previous feedback")
             print("3. Exit")
 
-            user_ip = input("\nPlease enter '1', '2', or '3'")
+            user_ip = input("\nPlease enter '1', '2', or '3': ")
 
             if (user_ip == "1"):
                 rating = input("\nRate your experience (1-10): ")
-                comment = input("\nPlease leave a mesasge telling us how we can improve")
+                comment = input("\nPlease leave a mesasge telling us how we can improve: ")
                 print("\nWe greatly appreciate your feedback!")
 
                 feedback ={
