@@ -2,8 +2,8 @@ bases = [
     {"id": "B1", "Name": "Espresso"},
     {"id": "B2", "Name": "Americano"},
     {"id": "B3", "Name": "Latte"},
-    {"id": "B3", "Name": "Cappuccino"},
-    {"id": "B3", "Name": "Frappuccino"}
+    {"id": "B4", "Name": "Cappuccino"},
+    {"id": "B5", "Name": "Frappuccino"}
 ]
 
 flavors = [
