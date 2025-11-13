@@ -146,7 +146,7 @@ while True:
 
         if (add_to_cart == "Yes"):
             custom_coffee = {
-                "product_id" : len(cart) + 1,
+                "product_id" : str(len(cart) + 1),
                 "Name" : f"Custom Coffee: Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSuger: {sugar_selected}\nDrizzle: {drizzle_selected}",
                 "Price" : "$6.99"
             }
