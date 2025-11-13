@@ -205,7 +205,7 @@ while True:
 
             if (user_ip == "1"):
                 rating = input("\nRate your experience (1-10): ")
-                comment == input("\nPlease leave a mesasge telling us how we can improve")
+                comment = input("\nPlease leave a mesasge telling us how we can improve")
                 print("\nWe greatly appreciate your feedback!")
 
                 feedback ={
@@ -217,20 +217,16 @@ while True:
 
             elif (user_ip == "2"):
                 if len(feedback_list)==0:
-                    print("/nThere is no feedback yet.")
+                    print("\nThere is no feedback yet.")
                 else:
-                    print("\nCustomer Feedback")
+                    print("\nCustomer Feedback\n")
                     for i in feedback_list:
-                        print(f"Rating: {i['rating']}/10\nComment: {i['comment']}")
+                        print(f"\nRating: {i['rating']}/10\nComment: {i['comment']}\n")
 
             elif (user_ip == "3"):
+                break
             else:
                 print("\nInvalid choice. Please pick between 1-3")
-
-
-
-
-
 
 
     elif choice == "5":
