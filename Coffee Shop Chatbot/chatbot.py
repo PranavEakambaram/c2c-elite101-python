@@ -140,7 +140,7 @@ while True:
         print(f"\nYour Drizzle: {drizzle_selected}")
 
         print("\n\nYour Coffee: ")
-        print(f"Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSuger: {sugar_selected}\nDrizzle: {drizzle_selected}")
+        print(f"Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSugar: {sugar_selected}\nDrizzle: {drizzle_selected}")
 
 
         add_to_cart = input("\nWould you like to add your coffee to your cart? Please answer 'Yes' or 'No'")
@@ -148,7 +148,7 @@ while True:
         if (add_to_cart == "Yes"):
             custom_coffee = {
                 "product_id" : str(len(cart) + 1),
-                "Name" : f"Custom Coffee: Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSuger: {sugar_selected}\nDrizzle: {drizzle_selected}",
+                "Name" : f"Custom Coffee: Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSugar: {sugar_selected}\nDrizzle: {drizzle_selected}",
                 "Price" : "$6.99"
             }
             cart.append(custom_coffee)
