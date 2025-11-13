@@ -2,6 +2,7 @@ from order_menu import menu
 from make_your_own_coffee import bases, flavors, milks, sugars, drizzles
 
 cart = []
+feedback_list = []
 
 print("\n\nWelcome to Pranav's Coffee Shop!")
 user_name = input ("\nWhat's your name?")
@@ -138,7 +139,7 @@ while True:
                 print("\nPlease enter a valid drizzle ID")
         print(f"\nYour Drizzle: {drizzle_selected}")
 
-        print("Your Coffee: ")
+        print("\n\nYour Coffee: ")
         print(f"Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSuger: {sugar_selected}\nDrizzle: {drizzle_selected}")
 
 
@@ -165,7 +166,7 @@ while True:
             print("\nHere's Your Cart:\n")
 
             for i in cart:
-                print(i['product_id'] + ": " + i['Name'] + " - " + i['Price'])
+                print(i['product_id'] + ": " + i['Name'] + " - " + i['Price'] + "\n")
 
             action = input("\nEnter a product ID to remove an item, or enter 'Checkout' to purchase, or enter 'Quit' to go back.")
 
@@ -192,7 +193,41 @@ while True:
 
 
     elif choice == "4":
-        print("asdf")
+        print("\nPlease tell us how we can improve!")
+
+        while True:
+            print("Please choose one of the following: ")
+            print("1. Leave new feedback")
+            print("2. View previous feedback")
+            print("3. Exit")
+
+            user_ip = input("\nPlease enter '1', '2', or '3'")
+
+            if (user_ip == "1"):
+                rating = input("\nRate your experience (1-10): ")
+                comment == input("\nPlease leave a mesasge telling us how we can improve")
+                print("\nWe greatly appreciate your feedback!")
+
+                feedback ={
+                    "rating" : rating,
+                    "comment" : comment,
+                            }
+
+                feedback_list.append(feedback)
+
+            elif (user_ip == "2"):
+                if len(feedback_list)==0:
+                    print("/nThere is no feedback yet.")
+                else:
+                    print("\nCustomer Feedback")
+                    for i in feedback_list:
+                        print(f"Rating: {i['rating']}/10\nComment: {i['comment']}")
+
+            elif (user_ip == "3"):
+            else:
+                print("\nInvalid choice. Please pick between 1-3")
+
+
 
 
 
