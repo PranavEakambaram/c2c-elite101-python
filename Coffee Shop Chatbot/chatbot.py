@@ -1,5 +1,5 @@
 from order_menu import menu
-from make_your_own_coffee import bases, milks, sugars, drizzles
+from make_your_own_coffee import bases, flavors, milks, sugars, drizzles
 
 cart = []
 
@@ -139,15 +139,21 @@ while True:
         print(f"Your Drizzle: {drizzle_selected}")
 
         print("Your Coffee: ")
-        custom_order = f"Base: {base_selected}\nFlavor: {base_selected}\nMilk: {base_selected}\nSuger: {base_selected}\nDrizzle: {base_selected}"
-        print(custom_order)
+        print(f"Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSuger: {sugar_selected}\nDrizzle: {drizzle_selected}")
+
 
         add_to_cart = input("Would you like to add your coffee to your cart? Please answer 'Yes' or 'No'")
 
-        if (add_to_cart == "Yes")
+        if (add_to_cart == "Yes"):
+            custom_coffee = {
+                "product_id" : len(cart) + 1
+                "Name" : f"Custom Coffee: Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSuger: {sugar_selected}\nDrizzle: {drizzle_selected}",
+                "Price" : "$6.99"
+            }
+            cart.append(custom_coffee)
             print("Your Coffee was added to cart!")
 
-        elif (add_to_cart = "No")
+        elif (add_to_cart = "No"):
             print("Order cancelled")
 
 
