@@ -3,10 +3,10 @@ from make_your_own_coffee import bases, flavors, milks, sugars, drizzles
 
 cart = []
 
-print("Welcome to Pranav's Coffee Shop!")
-user_name = input ("What's your name?")
-user_age = input("How old are you?")
-print(f"Hi {user_name}! How can I help you today?")
+print("\n\nWelcome to Pranav's Coffee Shop!")
+user_name = input ("\nWhat's your name?")
+user_age = input("\nHow old are you?")
+print(f"Hi {user_name}! How can I help you today?\n")
 
 
 while True:
@@ -146,14 +146,14 @@ while True:
 
         if (add_to_cart == "Yes"):
             custom_coffee = {
-                "product_id" : len(cart) + 1
+                "product_id" : len(cart) + 1,
                 "Name" : f"Custom Coffee: Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSuger: {sugar_selected}\nDrizzle: {drizzle_selected}",
                 "Price" : "$6.99"
             }
             cart.append(custom_coffee)
             print("Your Coffee was added to cart!")
 
-        elif (add_to_cart = "No"):
+        elif (add_to_cart == "No"):
             print("Order cancelled")
 
 
