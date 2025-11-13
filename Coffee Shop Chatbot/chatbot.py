@@ -160,17 +160,17 @@ while True:
 
     elif choice == "3":
         if len(cart) == 0:
-            print("Your Cart is Empty. Enter 'Quit' to go back.")
+            print("\nYour Cart is Empty. Enter 'Quit' to go back.")
         else:
-            print("Here's Your Cart:")
+            print("\nHere's Your Cart:\n")
 
             for i in cart:
                 print(i['product_id'] + ": " + i['Name'] + " - " + i['Price'])
 
-            action = input("Enter a product ID to remove an item, or enter 'Checkout' to purchase, or enter 'Quit' to go back.")
+            action = input("\nEnter a product ID to remove an item, or enter 'Checkout' to purchase, or enter 'Quit' to go back.")
 
             if action == "Checkout":
-                print ("Your coffee will be ready in 5 minutes")
+                print ("\nYour coffee will be ready in 5 minutes")
 
             elif action == "Quit":
                 pass
@@ -184,9 +184,9 @@ while True:
 
                 if item:
                     cart.remove(item)
-                    print("Item has been removed from your cart!")
+                    print("\nItem has been removed from your cart!")
                 else:
-                    print("Product not found")
+                    print("\nProduct not found")
 
 
 
@@ -199,7 +199,7 @@ while True:
 
 
     elif choice == "5":
-        print(f"Thank you, {user_name}, Hope to see you again!")
+        print(f"\nThank you {user_name}, Hope to see you again!")
         break
     else:
-        print("That's not an option. Please enter a number 1-5.")
+        print("\nThat's not an option. Please enter a number 1-5.")
