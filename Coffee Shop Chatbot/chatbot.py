@@ -26,7 +26,7 @@ while True:
         print("Here's Our Menu:")
         print("")
         for i in menu:
-            print(i['product_id'] + ": " + i['Name'] + " - " + i['Price']).             # prints the menu stoered in order_menu.py
+            print(i['product_id'] + ": " + i['Name'] + " - " + i['Price'])             #prints the menu stored in order menu
 
         product_id = input("\nEnter the product ID of the drink you would like to add to cart. Enter 'Quit' to go back.")
 
