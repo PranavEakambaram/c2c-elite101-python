@@ -4,7 +4,7 @@ from make_your_own_coffee import bases, flavors, milks, sugars, drizzles
 cart = []
 feedback_list = []
 
-print("\n\nWelcome to Pranav's Coffee Shop!")
+print("\n\n\033[1mWelcome to Pranav's Coffee Shop!\033[0m")
 user_name = input ("\nWhat's your name?")
 user_age = input("\nHow old are you?")
 print(f"\n\nHi {user_name}! How can I help you today?\n")
@@ -162,7 +162,7 @@ while True:
     elif choice == "3":
         if len(cart) == 0:
 
-            print("\nYour Cart is Empty. Enter 'Quit' to go back.")
+            print("\nYour Cart is Empty.")
         else:
             print("\nHere's Your Cart:\n")
 
