@@ -1,17 +1,17 @@
 from order_menu import menu
-from make_your_own_coffee import bases, flavors, milks, sugars, drizzles
+from make_your_own_coffee import bases, flavors, milks, sugars, drizzles              # give the main file access to the two lists used later in the program
 
 cart = []
-feedback_list = []
+feedback_list = []                                                                        # initialize empty lists for later storage
 
-print("\n\n\033[1mWelcome to Pranav's Coffee Shop!\033[0m")
+print("\n\n\033[1mWelcome to Pranav's Coffee Shop!\033[0m")                        # used AI to learn how to make text bold to make initial message stand out
 user_name = input ("\nWhat's your name?")
 user_age = input("\nHow old are you?")
 print(f"\n\nHi {user_name}! How can I help you today?\n")
 
 
 while True:
-    print("\n\n\nPlease select one of the following options.")
+    print("\n\n\nPlease select one of the following options.")                     # main logic/ main screen print message
     print("1. Order a Coffee")
     print("2. Build Your Own Coffee")
     print("3. View Your Cart / Checkout")
@@ -26,7 +26,7 @@ while True:
         print("Here's Our Menu:")
         print("")
         for i in menu:
-            print(i['product_id'] + ": " + i['Name'] + " - " + i['Price'])
+            print(i['product_id'] + ": " + i['Name'] + " - " + i['Price']).             # prints the menu stoered in order_menu.py
 
         product_id = input("\nEnter the product ID of the drink you would like to add to cart. Enter 'Quit' to go back.")
 
@@ -34,27 +34,27 @@ while True:
             pass
 
         else:
-            item = None
+            item = None                                     # set item equal to none in a larger scope for later use
             for i in menu:
                 if i['product_id'] == product_id:
                     item = i
                     break
 
-            if item:
+            if item:                        # if the product id is found, add it to the cart list
                 cart.append(item)
                 print("\nItem has been added to cart!")
-            else:
+            else:                                                   # if its not found, print not found
                 print("\nProduct not found")
 
 
     elif choice == "2":
 
-        base_selected = None
+        base_selected = None                                    # set the base to none in a larger scope to use outside the while loop
         while (base_selected == None):
             print("\nChoose your base:\n")
 
             for b in bases:
-                print(b['id'] + ": " + b['Name'])
+                print(b['id'] + ": " + b['Name'])               # print base options
 
             base_choice = input ("\nEnter the ID of the base you would like.")
 
@@ -63,11 +63,11 @@ while True:
                     base_selected = b['Name']
                     break
 
-            if base_selected == None:
+            if base_selected == None:               # checks if the base selected is still none
                 print("\nPlease enter a valid base ID\n")
         print(f"\nYour Base: {base_selected}")
 
-        flavor_selected = None
+        flavor_selected = None                                                          # repeats the same code for the base, but using flavor instead
         while (flavor_selected == None):
             print("\nChoose your flavor\n")
 
@@ -85,7 +85,7 @@ while True:
                 print("\nPlease enter a valid flavor ID")
         print(f"\nYour Flavor: {flavor_selected}")
 
-        milk_selected = None
+        milk_selected = None                                                            # same as base and flavor
         while (milk_selected == None):
             print("\nChoose your milk type:\n")
 
@@ -140,13 +140,13 @@ while True:
         print(f"\nYour Drizzle: {drizzle_selected}")
 
         print("\n\nYour Coffee: ")
-        print(f"Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSugar: {sugar_selected}\nDrizzle: {drizzle_selected}")
+        print(f"Base: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSugar: {sugar_selected}\nDrizzle: {drizzle_selected}")         #prints the user's custom coffee in a large string
 
 
         add_to_cart = input("\nWould you like to add your coffee to your cart? Please answer 'Yes' or 'No'")
 
         if (add_to_cart == "Yes"):
-            custom_coffee = {
+            custom_coffee = {        # creates a product_id, Name, and Price for matching with existing objects in the order menu, used later for printing cart list
                 "product_id" : str(len(cart) + 1),
                 "Name" : f" Custom Coffee: \nBase: {base_selected}\nFlavor: {flavor_selected}\nMilk: {milk_selected}\nSugar: {sugar_selected}\nDrizzle: {drizzle_selected}",
                 "Price" : "$6.99"
@@ -167,13 +167,13 @@ while True:
             print("\nHere's Your Cart:\n")
 
             for i in cart:
-                print(i['product_id'] + ": " + i['Name'] + " - " + i['Price'] + "\n")
+                print(i['product_id'] + ": " + i['Name'] + " - " + i['Price'] + "\n")     #every coffeee, including custom, will have all three
 
             action = input("\nEnter a product ID to remove an item, or enter 'Checkout' to purchase, or enter 'Quit' to go back.")
 
             if action == "Checkout":
                 print ("\nYour coffee will be ready in 5 minutes")
-                cart.clear()
+                cart.clear()                                #resets cart after checking out
 
             elif action == "Quit":
                 pass
@@ -181,12 +181,12 @@ while True:
             else:
                 item = None
                 for i in cart:
-                    if i['product_id'] == action:
+                    if i['product_id'] == action:       #finds the item in the cart with the product id
                         item = i
                         break
 
                 if item:
-                    cart.remove(item)
+                    cart.remove(item)                                           #removes the item from cart
                     print("\nItem has been removed from your cart!")
                 else:
                     print("\nProduct not found")
@@ -211,7 +211,7 @@ while True:
                 print("\nWe greatly appreciate your feedback!")
 
                 feedback ={
-                    "rating" : rating,
+                    "rating" : rating,                              #adds rating and comment into a list for later reference
                     "comment" : comment,
                             }
 
@@ -221,7 +221,7 @@ while True:
                 if len(feedback_list)==0:
                     print("\nThere is no feedback yet.")
                 else:
-                    print("\nCustomer Feedback\n")
+                    print("\nCustomer Feedback\n")                                  #prints the previous feedback (resets every run, no file to store feedback)
                     for i in feedback_list:
                         print(f"\nRating: {i['rating']}/10\nComment: {i['comment']}\n")
 
@@ -232,7 +232,7 @@ while True:
 
 
     elif choice == "5":
-        print(f"\nThank you {user_name}, Hope to see you again!")
+        print(f"\nThank you {user_name}, Hope to see you again!")                               #ends the program
         break
     else:
         print("\nThat's not an option. Please enter a number 1-5.")
